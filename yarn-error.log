@@ -1,0 +1,35 @@
+Arguments: 
+  /home/onoja/.nvm/versions/node/v16.14.0/bin/node /usr/bin/yarn add express cors morgan helmet compression dotenv winston supertest mocha chai
+
+PATH: 
+  /home/onoja/.nvm/versions/node/v16.14.0/bin:/home/onoja/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/bin/Postman:/usr/bin/Postman
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.14.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
+
+npm manifest: 
+  {
+    "name": "yassir-assessment",
+    "version": "1.0.0",
+    "description": "Yassir I=",
+    "main": "server.js",
+    "repository": "https://github.com/onojaMatthew/yassir.git",
+    "author": "Onoja Igoche Matthew",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
