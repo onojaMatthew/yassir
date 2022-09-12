@@ -8,14 +8,10 @@ let db_url;
 const env = process.env.NODE_ENV || 'development';
 
 if ( env === "development" ) {
-  db_url = `mongodb+srv://${key.dev_db_user}:${key.dev_db_password}@${key.dev_db_host}/${key.db_name}`;
+  db_url = key.DB_URL;
 } else if (env === "test") {
-  db_url = `mongodb+srv://${key.dev_db_user}:${key.dev_db_password}@${key.dev_db_host}/${key.db_name}`;
-} else {
-  db_url = `mongodb+srv://${key.db_user}:${key.db_password}@${key.db_host}/${key.db_name}`;
+  db_url = key.TEST_DB;
 }
-
-// mongodb+srv://gigAlpha:m0lHCAYrEccmirHX@cluster1.uzfdh.mongodb.net/gigAlphaProduct
 
 export default () => {
   mongoose.Promise = global.Promise;

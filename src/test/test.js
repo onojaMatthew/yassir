@@ -13,7 +13,7 @@ const { expect } = expected;
 
 describe('Air Quality', () => {
   before(done => {
-    
+    console.log("Running the test script");
     done()
   })
   
@@ -39,7 +39,19 @@ describe('Air Quality', () => {
     });
   });
 
-  it('it should GET all the product', (done) => {
+  it('it should fail with 404 error code', (done) => {
+    chai.request(app)
+      .get('/api/v1/nearest_city_air_quality/35.98')
+      .end((err, res) => {
+        const body = res.body;
+        expect(404);
+        expect(body).to.be.instanceOf(Object);
+        expect(res.status).to.equal(404);
+        done();
+    });
+  });
+
+  it('it should return the most polluted DATE and TIME', (done) => {
     chai.request(app)
     .get('/api/v1/most_polluted_time')
     .end((err, res) => {
