@@ -10,6 +10,8 @@ IQAIR (Rest Backend) Concept - Assessment
 * Install the projects dependencies 
   - > `yarn install`
 
+* The API Routes for this project can be located in the `controllers` folder.
+
 Set up Environment Variables
 ---
 * To declare environment variables for the project
