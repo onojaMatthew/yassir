@@ -6,6 +6,7 @@ import db from "./config/db";
 import router from "./middleware/router";
 import { logger } from "./middleware/logger";
 import { prod } from "./middleware/prod";
+import { scheduler } from "./utils/scheduler";
 
 const port = process.env.PORT || 5000;
 
@@ -26,14 +27,12 @@ app.use( ( req, res, next ) => {
   next();
 });
 
-
-
 // root route
 app.get("/", (req, res) => {
   res.json({ message: "WELCOME TO YASSIR ASSESSMENT API" });
 });
 
-
+scheduler();
 router(app);
 
 // error logger

@@ -21,13 +21,11 @@ export default () => {
   mongoose.Promise = global.Promise;
   mongoose.connect( db_url, {
     useNewUrlParser: true,
-    useCreateIndex: true,
     useUnifiedTopology: true,
-    poolSize: 5,
     socketTimeoutMS: 100000,
   } )
     .then( () => {
-      logger.info("Connection to PRODUCT database established");
+      logger.info("Connection to database established");
     } )
     .catch( err => {
       logger.error(`Connection failed. ${ err.message }`);
